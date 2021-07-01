@@ -1,11 +1,13 @@
 package pl.mmichal93.musiclibrary.model;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import java.time.LocalDate;
 import java.util.List;
 
 @Entity
+@DiscriminatorValue(value = "Producer")
 public class Producer extends Member {
     private boolean hasStudio;
     @OneToMany(mappedBy = "producer")
