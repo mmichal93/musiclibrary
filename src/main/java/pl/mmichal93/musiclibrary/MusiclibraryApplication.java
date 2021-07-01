@@ -5,19 +5,19 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import pl.mmichal93.musiclibrary.model.Album;
 import pl.mmichal93.musiclibrary.model.Band;
 import pl.mmichal93.musiclibrary.model.Musician;
+import pl.mmichal93.musiclibrary.repo.AlbumRepo;
+import pl.mmichal93.musiclibrary.service.AlbumService;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @SpringBootApplication
 public class MusiclibraryApplication {
+	private AlbumRepo albumRepo;
 
 	public static void main(String[] args) {
 		SpringApplication.run(MusiclibraryApplication.class, args);
 	}
-//		public void initExampleData(){
-//			Band newBand = new Band("Metallica",null,null,null);
-//			Musician musician1 = new Musician("Lars","Urlich",LocalDate.of(1959,1,1),"Drums",null);
-//			Musician musician2 = new Musician("James","Hetfield",LocalDate.of(1959,1,1),"Guitar",null);
-//			Album album1 = new Album("Kill'em all", LocalDate.of(1983,1,1),null,null,null);
-//		};
+
 }

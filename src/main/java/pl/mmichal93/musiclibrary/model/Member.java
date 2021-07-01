@@ -20,6 +20,9 @@ public abstract class Member {
         this.birthDay = birthDay;
     }
 
+    public Member() {
+    }
+
     public Long getId() {
         return id;
     }

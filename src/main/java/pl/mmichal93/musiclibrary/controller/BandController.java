@@ -7,7 +7,8 @@ import pl.mmichal93.musiclibrary.model.Band;
 import pl.mmichal93.musiclibrary.service.BandService;
 
 import java.util.List;
-
+@RestController
+@RequestMapping("/band")
 public class BandController {
     private final BandService bandService;
 

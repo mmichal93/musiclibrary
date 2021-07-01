@@ -1,5 +1,7 @@
 package pl.mmichal93.musiclibrary.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -11,8 +13,10 @@ public class Album {
     private String title;
     private LocalDate releaseDate;
     @ManyToOne
+    @JsonBackReference
     private Band band;
     @ManyToOne
+    @JsonBackReference
     private Producer producer;
     private String coverUri;
 
@@ -22,6 +26,9 @@ public class Album {
         this.band = band;
         this.producer = producer;
         this.coverUri = coverUri;
+    }
+
+    public Album() {
     }
 
     public Long getId() {

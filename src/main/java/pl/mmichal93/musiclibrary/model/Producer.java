@@ -1,5 +1,7 @@
 package pl.mmichal93.musiclibrary.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
@@ -11,8 +13,12 @@ import java.util.List;
 public class Producer extends Member {
     private boolean hasStudio;
     @OneToMany(mappedBy = "producer")
+    @JsonManagedReference
     private List<Album> albums;
 
+
+    public Producer() {
+    }
 
     public Producer(String name, String surname, LocalDate birthDay, boolean hasStudio, List<Album> albums) {
         super(name, surname, birthDay);

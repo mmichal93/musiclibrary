@@ -7,7 +7,8 @@ import pl.mmichal93.musiclibrary.model.Producer;
 import pl.mmichal93.musiclibrary.service.ProducerService;
 
 import java.util.List;
-
+@RestController
+@RequestMapping("/producer")
 public class ProducerController {
     private final ProducerService producerService;
 

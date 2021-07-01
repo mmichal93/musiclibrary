@@ -1,6 +1,7 @@
 package pl.mmichal93.musiclibrary.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import pl.mmichal93.musiclibrary.model.Musician;
 import pl.mmichal93.musiclibrary.model.Producer;
 import pl.mmichal93.musiclibrary.repo.ProducerRepo;
@@ -8,6 +9,7 @@ import pl.mmichal93.musiclibrary.repo.ProducerRepo;
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
 
+@Service
 public class ProducerService {
     private final ProducerRepo producerRepo;
 
