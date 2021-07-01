@@ -16,8 +16,7 @@ public class Album {
     private Producer producer;
     private String coverUri;
 
-    public Album(Long id, String title, LocalDate releaseDate, Band band, Producer producer, String coverUri) {
-        this.id = id;
+    public Album(String title, LocalDate releaseDate, Band band, Producer producer, String coverUri) {
         this.title = title;
         this.releaseDate = releaseDate;
         this.band = band;

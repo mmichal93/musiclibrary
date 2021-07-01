@@ -15,8 +15,7 @@ public class Band {
     private List<Album> albums;
     private String genre;
 
-    public Band(Long id, String bandName, List<Musician> musicians, List<Album> albums, String genre) {
-        this.id = id;
+    public Band( String bandName, List<Musician> musicians, List<Album> albums, String genre) {
         this.bandName = bandName;
         this.musicians = musicians;
         this.albums = albums;

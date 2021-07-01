@@ -12,8 +12,8 @@ public class Musician extends Member {
     @ManyToOne
     private Band band;
 
-    public Musician(Long id, String name, String surname, LocalDate birthDay, String instrument, Band band) {
-        super(id, name, surname, birthDay);
+    public Musician(String name, String surname, LocalDate birthDay, String instrument, Band band) {
+        super(name, surname, birthDay);
         this.instrument = instrument;
         this.band = band;
     }

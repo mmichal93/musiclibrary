@@ -14,8 +14,8 @@ public class Producer extends Member {
     private List<Album> albums;
 
 
-    public Producer(Long id, String name, String surname, LocalDate birthDay, boolean hasStudio, List<Album> albums) {
-        super(id, name, surname, birthDay);
+    public Producer(String name, String surname, LocalDate birthDay, boolean hasStudio, List<Album> albums) {
+        super(name, surname, birthDay);
         this.hasStudio = hasStudio;
         this.albums = albums;
     }
