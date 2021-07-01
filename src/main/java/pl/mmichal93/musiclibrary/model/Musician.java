@@ -1,10 +1,12 @@
 package pl.mmichal93.musiclibrary.model;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
 @Entity
+@DiscriminatorValue(value = "Musician")
 public class Musician extends Member {
     private String instrument;
     @ManyToOne

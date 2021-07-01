@@ -5,7 +5,8 @@ import java.time.LocalDate;
 
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-public class Member {
+@DiscriminatorColumn(name = "MEMBER_TYPE",discriminatorType = DiscriminatorType.STRING)
+public abstract class Member {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -19,7 +20,6 @@ public class Member {
         this.surname = surname;
         this.birthDay = birthDay;
     }
-
 
     public Long getId() {
         return id;
