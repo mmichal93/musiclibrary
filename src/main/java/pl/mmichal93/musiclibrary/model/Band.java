@@ -1,5 +1,7 @@
 package pl.mmichal93.musiclibrary.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -10,17 +12,21 @@ public class Band {
     private Long id;
     private String bandName;
     @OneToMany(mappedBy = "band")
+    @JsonManagedReference
     private List<Musician> musicians;
     @OneToMany(mappedBy = "band")
+    @JsonManagedReference
     private List<Album> albums;
     private String genre;
 
-    public Band(Long id, String bandName, List<Musician> musicians, List<Album> albums, String genre) {
-        this.id = id;
+    public Band( String bandName, List<Musician> musicians, List<Album> albums, String genre) {
         this.bandName = bandName;
         this.musicians = musicians;
         this.albums = albums;
         this.genre = genre;
+    }
+
+    public Band() {
     }
 
     public Long getId() {

@@ -5,5 +5,5 @@ import org.springframework.data.repository.NoRepositoryBean;
 import pl.mmichal93.musiclibrary.model.Member;
 
 @NoRepositoryBean
-public interface MemberRepo extends JpaRepository<Member,Long> {
+public interface MemberRepo<T extends Member> extends JpaRepository<T,Long> {
 }

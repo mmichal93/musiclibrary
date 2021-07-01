@@ -14,11 +14,13 @@ public abstract class Member {
     private String surname;
     private LocalDate birthDay;
 
-    public Member(Long id, String name, String surname, LocalDate birthDay) {
-        this.id = id;
+    public Member( String name, String surname, LocalDate birthDay) {
         this.name = name;
         this.surname = surname;
         this.birthDay = birthDay;
+    }
+
+    public Member() {
     }
 
     public Long getId() {
