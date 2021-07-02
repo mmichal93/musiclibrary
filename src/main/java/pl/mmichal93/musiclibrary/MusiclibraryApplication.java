@@ -7,12 +7,14 @@ import pl.mmichal93.musiclibrary.model.Band;
 import pl.mmichal93.musiclibrary.model.Musician;
 import pl.mmichal93.musiclibrary.repo.AlbumRepo;
 import pl.mmichal93.musiclibrary.service.AlbumService;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
+@EnableSwagger2
 public class MusiclibraryApplication {
 	private AlbumRepo albumRepo;
 
